@@ -21,7 +21,7 @@ namespace Benchmark.Grpc.Client
             _timer.Elapsed += (s, e) =>
             {
                 var lastMinuteCallCount = Interlocked.Exchange(ref _lastMinuteCallCount, 0);
-                Console.WriteLine($"{lastMinuteCallCount} ops/sec");
+                Console.WriteLine($"{DateTime.Now} -- {lastMinuteCallCount} ops/sec");
             };
             _timer.Start();
 
