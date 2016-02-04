@@ -8,7 +8,7 @@ namespace Benchmark.Wcf.Client
     class Program
     {
         private const int CALL_COUNT = 1000000;
-        private static Timer _timer = new Timer(1000);
+        private static readonly Timer _timer = new Timer(1000);
         private static int _lastMinuteCallCount;
 
         static void Main(string[] args)
