@@ -9,36 +9,35 @@ using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
 namespace Benchmark.Grpc.Common {
 
-  namespace Proto {
+  /// <summary>Holder for reflection information generated from BenchmarkService.proto</summary>
+  [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+  public static partial class BenchmarkServiceReflection {
 
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public static partial class BenchmarkService {
-
-      #region Descriptor
-      public static pbr::FileDescriptor Descriptor {
-        get { return descriptor; }
-      }
-      private static pbr::FileDescriptor descriptor;
-
-      static BenchmarkService() {
-        byte[] descriptorData = global::System.Convert.FromBase64String(
-            string.Concat(
-              "ChZCZW5jaG1hcmtTZXJ2aWNlLnByb3RvIhwKDlNlcnZpY2VSZXF1ZXN0EgoK", 
-              "AmlkGAEgASgFIh0KD1NlcnZpY2VSZXNwb25zZRIKCgJpZBgBIAEoBTKAAQoQ", 
-              "QmVuY2htYXJrU2VydmljZRIwCglPcGVyYXRpb24SDy5TZXJ2aWNlUmVxdWVz", 
-              "dBoQLlNlcnZpY2VSZXNwb25zZSIAEjoKD09wZXJhdGlvblN0cmVhbRIPLlNl", 
-              "cnZpY2VSZXF1ZXN0GhAuU2VydmljZVJlc3BvbnNlIgAoATABQhiqAhVCZW5j", 
-              "aG1hcmsuR3JwYy5Db21tb25iBnByb3RvMw=="));
-        descriptor = pbr::FileDescriptor.InternalBuildGeneratedFileFrom(descriptorData,
-            new pbr::FileDescriptor[] { },
-            new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
-              new pbr::GeneratedCodeInfo(typeof(global::Benchmark.Grpc.Common.ServiceRequest), new[]{ "Id" }, null, null, null),
-              new pbr::GeneratedCodeInfo(typeof(global::Benchmark.Grpc.Common.ServiceResponse), new[]{ "Id" }, null, null, null)
-            }));
-      }
-      #endregion
-
+    #region Descriptor
+    /// <summary>File descriptor for BenchmarkService.proto</summary>
+    public static pbr::FileDescriptor Descriptor {
+      get { return descriptor; }
     }
+    private static pbr::FileDescriptor descriptor;
+
+    static BenchmarkServiceReflection() {
+      byte[] descriptorData = global::System.Convert.FromBase64String(
+          string.Concat(
+            "ChZCZW5jaG1hcmtTZXJ2aWNlLnByb3RvIhwKDlNlcnZpY2VSZXF1ZXN0EgoK",
+            "AmlkGAEgASgFIh0KD1NlcnZpY2VSZXNwb25zZRIKCgJpZBgBIAEoBTKAAQoQ",
+            "QmVuY2htYXJrU2VydmljZRIwCglPcGVyYXRpb24SDy5TZXJ2aWNlUmVxdWVz",
+            "dBoQLlNlcnZpY2VSZXNwb25zZSIAEjoKD09wZXJhdGlvblN0cmVhbRIPLlNl",
+            "cnZpY2VSZXF1ZXN0GhAuU2VydmljZVJlc3BvbnNlIgAoATABQhiqAhVCZW5j",
+            "aG1hcmsuR3JwYy5Db21tb25iBnByb3RvMw=="));
+      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+          new pbr::FileDescriptor[] { },
+          new pbr::GeneratedCodeInfo(null, new pbr::GeneratedCodeInfo[] {
+            new pbr::GeneratedCodeInfo(typeof(global::Benchmark.Grpc.Common.ServiceRequest), global::Benchmark.Grpc.Common.ServiceRequest.Parser, new[]{ "Id" }, null, null, null),
+            new pbr::GeneratedCodeInfo(typeof(global::Benchmark.Grpc.Common.ServiceResponse), global::Benchmark.Grpc.Common.ServiceResponse.Parser, new[]{ "Id" }, null, null, null)
+          }));
+    }
+    #endregion
+
   }
   #region Messages
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -47,7 +46,7 @@ namespace Benchmark.Grpc.Common {
     public static pb::MessageParser<ServiceRequest> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Benchmark.Grpc.Common.Proto.BenchmarkService.Descriptor.MessageTypes[0]; }
+      get { return global::Benchmark.Grpc.Common.BenchmarkServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -68,6 +67,7 @@ namespace Benchmark.Grpc.Common {
       return new ServiceRequest(this);
     }
 
+    /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private int id_;
     public int Id {
@@ -99,7 +99,7 @@ namespace Benchmark.Grpc.Common {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {
@@ -149,7 +149,7 @@ namespace Benchmark.Grpc.Common {
     public static pb::MessageParser<ServiceResponse> Parser { get { return _parser; } }
 
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Benchmark.Grpc.Common.Proto.BenchmarkService.Descriptor.MessageTypes[1]; }
+      get { return global::Benchmark.Grpc.Common.BenchmarkServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     pbr::MessageDescriptor pb::IMessage.Descriptor {
@@ -170,6 +170,7 @@ namespace Benchmark.Grpc.Common {
       return new ServiceResponse(this);
     }
 
+    /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private int id_;
     public int Id {
@@ -201,7 +202,7 @@ namespace Benchmark.Grpc.Common {
     }
 
     public override string ToString() {
-      return pb::JsonFormatter.Default.Format(this);
+      return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     public void WriteTo(pb::CodedOutputStream output) {

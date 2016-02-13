@@ -32,7 +32,7 @@ namespace Benchmark.Grpc.Common {
     // service descriptor
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Benchmark.Grpc.Common.Proto.BenchmarkService.Descriptor.Services[0]; }
+      get { return global::Benchmark.Grpc.Common.BenchmarkServiceReflection.Descriptor.Services[0]; }
     }
 
     // client interface
